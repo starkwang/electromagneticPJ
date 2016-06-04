@@ -1,3 +1,12 @@
+.range{
+    height: 65px;
+}
+
+.range > .range-field{
+    position: relative;
+    top: 30px;
+}
+
 /*
 KISSY CSS Reset
 理念：清除和重置是紧密不可分的

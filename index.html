@@ -9,26 +9,45 @@
 </head>
 
 <body>
-    <div>
+    <!-- Page Content goes here -->
+    <div style="width:1200px;margin: 0 auto;overflow: hidden;">
         <canvas id="canvas1" width="600" height="400" style="float:left;"></canvas>
         <div id="linechart" style="width: 600px;height:400px;float: left;"></div>
     </div>
     <div class="container">
-        <!-- Page Content goes here -->
         <div class="row">
-            <div class="col s6">
-                <form action="#">
+            <form action="#">
+                <div class="input-field col s6 range">
+                    <label>频率（×10^7Hz）</label>
                     <p class="range-field">
-                        <input type="range" id="frequency" min="0" max="100" />
+                        <input type="range" class="control" id="frequency" min="0" max="10" step="0.01" />
                     </p>
-                </form>
-            </div>
+                </div>
+                <div class="input-field col s6 range">
+                    <label>导体半径（mm）</label>
+                    <p class="range-field">
+                        <input type="range" class="control" id="trueRadius" min="0" max="1" step="0.01" />
+                    </p>
+                </div>
+                <div class="input-field col s6">
+                    <select class="control" id="electricConductivity">
+                        <option value="6.17" selected>银 6.17×10^7σ/(S/m)</option>
+                        <option value="5.8">紫铜 5.8×10^7σ/(S/m)</option>
+                        <option value="3.72">铝 3.72×10^7σ/(S/m)</option>
+                        <option value="2.1">钠 2.1×10^7σ/(S/m)</option>
+                        <option value="1.6">黄铜 1.6×10^7σ/(S/m)</option>
+                        <option value="0.87">锡 0.87×10^7σ/(S/m)</option>
+                        <option value="0.01">石墨 0.01×10^7σ/(S/m)</option>
+                    </select>
+                    <label>电导率</label>
+                </div>
+            </form>
         </div>
     </div>
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./js/jQuery.min.js"></script>
 <script type="text/javascript" src="./js/materialize.min.js"></script>
-<script type="text/javascript" src="./js/echarts.simple.min.js"></script>
+<script type="text/javascript" src="./js/echarts.min.js"></script>
 <script type="text/javascript" src="./js/crossSectionDrawer.js"></script>
 <script type="text/javascript" src="./js/lineChartDrawer.js"></script>
 <script type="text/javascript" src="./js/main.js"></script>
