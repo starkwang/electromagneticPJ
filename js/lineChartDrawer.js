@@ -2,7 +2,6 @@
     var myChart = echarts.init(document.getElementById('linechart'));
     // 指定图表的配置项和数据
     function draw(trueRadius, data) {
-        console.log(data);
         var d = [];
         for (var i = 0; i < 1000; i++) {
             var deepth = data[i];

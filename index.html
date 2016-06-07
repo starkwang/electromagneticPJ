@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- Page Content goes here -->
     <div style="width:1200px;margin: 0 auto;overflow: hidden;">
         <canvas id="canvas1" width="600" height="400" style="float:left;"></canvas>
         <div id="linechart" style="width: 600px;height:400px;float: left;"></div>
@@ -19,12 +18,14 @@
             <form action="#">
                 <div class="input-field col s6 range">
                     <label>频率（×10^7Hz）</label>
+                    <p class="value" id="frequency-value-text">当前频率：{{f}}Hz</p>
                     <p class="range-field">
                         <input type="range" class="control" id="frequency" min="0" max="10" step="0.01" />
                     </p>
                 </div>
                 <div class="input-field col s6 range">
                     <label>导体半径（mm）</label>
+                    <p class="value" id="trueRadius-value-text">当前半径：{{r}}mm</p>
                     <p class="range-field">
                         <input type="range" class="control" id="trueRadius" min="0" max="1" step="0.01" />
                     </p>
@@ -48,6 +49,7 @@
 <script type="text/javascript" src="./js/jQuery.min.js"></script>
 <script type="text/javascript" src="./js/materialize.min.js"></script>
 <script type="text/javascript" src="./js/echarts.min.js"></script>
+<script type="text/javascript" src="./js/kernel.js"></script>
 <script type="text/javascript" src="./js/crossSectionDrawer.js"></script>
 <script type="text/javascript" src="./js/lineChartDrawer.js"></script>
 <script type="text/javascript" src="./js/main.js"></script>

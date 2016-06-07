@@ -7,6 +7,16 @@
     top: 30px;
 }
 
+.input-field > .value{
+    color: #9e9e9e;
+    position: absolute;
+    top: 0.8rem;
+    right: 2rem;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-out;
+}
+
 /*
 KISSY CSS Reset
 理念：清除和重置是紧密不可分的
